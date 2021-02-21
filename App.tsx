@@ -10,14 +10,10 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import {View, Text} from 'react-native';
+import RootStackNavigation from './src/navigation';
 
 const App = () => {
-  return (
-    <View>
-      <Text>FITTOK</Text>
-    </View>
-  );
+  return <RootStackNavigation />;
 };
 
 export default App;
