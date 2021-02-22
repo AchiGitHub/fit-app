@@ -21,7 +21,7 @@ function PostItem() {
           <Text style={styles.userName}>Lauren Wood</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log('redirect')}>
-          {/* <Icons name="dots-vertical" size={24} /> */}
+          <Icon name="dots-vertical" size={24} />
         </TouchableOpacity>
       </View>
       <View style={styles.body}>
@@ -56,7 +56,7 @@ export default PostItem;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
-    borderRadius: 10,
+    borderRadius: 15,
     padding: 5,
   },
   postHeader: {
@@ -64,10 +64,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
-    // borderTopColor: '#ddd',
-    // borderTopWidth: 0.5,
-    // borderBottomColor: '#ddd',
-    // borderBottomWidth: 0.5,
     backgroundColor: '#fff',
   },
   infoWrapper: {

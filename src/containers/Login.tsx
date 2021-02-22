@@ -15,6 +15,6 @@ export default Login;
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 10,
+    marginHorizontal: 5,
   },
 });
