@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import VideoSlot from './VideoSlot';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function PostItem() {
   return (
@@ -30,14 +31,19 @@ function PostItem() {
         <View style={styles.reactions}>
           <View style={styles.lReactions}>
             {/* <TouchableOpacity onPress={_toggleLikePost}> */}
-            {/* <Icons name={isLiked
-                                ? "heart" : "heart-outline"}
-                                size={24}
-                                color={
-                                    isLiked ? 'red' : '#000'
-                                } /> */}
+            <Icon
+              // name={isLiked ? 'heart' : 'heart-outline'}
+              name="heart"
+              size={24}
+              color="red"
+            />
             {/* </TouchableOpacity> */}
-            <Text>Hey</Text>
+            <Text style={styles.challengeName}>1,234,469</Text>
+          </View>
+        </View>
+        <View style={styles.reactions}>
+          <View style={styles.lReactions}>
+            <Text style={styles.challengeName}>100 Squats in 5 Minutes</Text>
           </View>
         </View>
       </View>
@@ -114,7 +120,6 @@ const styles = StyleSheet.create({
   },
   lReactions: {
     flexDirection: 'row',
-    width: 24.3 * 3 + 15,
     justifyContent: 'space-between',
     alignItems: 'center',
   },
@@ -141,5 +146,9 @@ const styles = StyleSheet.create({
   },
   userName: {
     fontWeight: '600',
+  },
+  challengeName: {
+    fontWeight: '600',
+    marginLeft: 5,
   },
 });
