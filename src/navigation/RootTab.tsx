@@ -13,15 +13,15 @@ export type rootStackParamList = {
 const RootTab = createStackNavigator<rootStackParamList>();
 
 const index = (): JSX.Element => {
-  const logined = true;
+  const loggedIn = true;
   return (
     <RootTab.Navigator
-      initialRouteName={logined ? 'HomeTab' : 'AuthStack'}
+      initialRouteName={loggedIn ? 'HomeTab' : 'AuthStack'}
       screenOptions={{
         headerShown: false,
       }}>
-      {!logined && <RootTab.Screen name="AuthStack" component={AuthStack} />}
-      {logined && <RootTab.Screen name="HomeTab" component={HomeTab} />}
+      {!loggedIn && <RootTab.Screen name="AuthStack" component={AuthStack} />}
+      {loggedIn && <RootTab.Screen name="HomeTab" component={HomeTab} />}
     </RootTab.Navigator>
   );
 };
