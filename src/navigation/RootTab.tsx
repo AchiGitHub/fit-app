@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import AuthStack from './AuthStacak';
+import HomeTab from './HomeTab';
 
 export type rootStackParamList = {
   AuthStack: undefined;
@@ -12,9 +13,15 @@ export type rootStackParamList = {
 const RootTab = createStackNavigator<rootStackParamList>();
 
 const index = (): JSX.Element => {
+  const logined = true;
   return (
-    <RootTab.Navigator initialRouteName="AuthStack">
-      <RootTab.Screen name="AuthStack" component={AuthStack} />
+    <RootTab.Navigator
+      initialRouteName={logined ? 'HomeTab' : 'AuthStack'}
+      screenOptions={{
+        headerShown: false,
+      }}>
+      {!logined && <RootTab.Screen name="AuthStack" component={AuthStack} />}
+      {logined && <RootTab.Screen name="HomeTab" component={HomeTab} />}
     </RootTab.Navigator>
   );
 };

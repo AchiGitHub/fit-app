@@ -1,150 +1,76 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import FastImage from 'react-native-fast-image';
-import VideoSlot from './VideoSlot';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {Text, TouchableOpacity, View} from 'react-native';
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import Video from 'react-native-video';
+
+import Entypo from 'react-native-vector-icons/Entypo';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import styles from './styles';
 
 function PostItem() {
   return (
     <View style={styles.container}>
-      <View style={styles.postHeader}>
-        <TouchableOpacity
-          onPress={() => console.log('clicked')}
-          style={styles.infoWrapper}>
-          <FastImage
-            style={styles.avatar}
-            source={{
-              uri:
-                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-            }}
+      <TouchableWithoutFeedback>
+        <View>
+          <Video
+            source={require('../../assets/video.mp4')}
+            style={styles.video}
+            onError={(e) => console.log(e)}
+            resizeMode={'cover'}
+            repeat={true}
+            // paused={paused}
           />
-          <Text style={styles.userName}>Lauren Wood</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => console.log('redirect')}>
-          <Icon name="dots-vertical" size={24} />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.body}>
-        <VideoSlot />
-      </View>
-      <View style={styles.reactionsWrapper}>
-        <View style={styles.reactions}>
-          <View style={styles.lReactions}>
-            {/* <TouchableOpacity onPress={_toggleLikePost}> */}
-            <Icon
-              // name={isLiked ? 'heart' : 'heart-outline'}
-              name="heart"
-              size={24}
-              color="red"
-            />
-            {/* </TouchableOpacity> */}
-            <Text style={styles.challengeName}>1,234,469</Text>
+
+          <View style={styles.uiContainer}>
+            <View style={styles.rightContainer}>
+              {/* <Image
+                style={styles.profilePicture}
+                source={{uri: post.user.imageUri}}
+              /> */}
+
+              <TouchableOpacity style={styles.iconContainer}>
+                <AntDesign
+                  name={'heart'}
+                  size={40}
+                  color={true ? 'red' : 'white'}
+                />
+                <Text style={styles.statsLabel}>1,233,422</Text>
+              </TouchableOpacity>
+
+              <View style={styles.iconContainer}>
+                <FontAwesome name={'commenting'} size={40} color="white" />
+                <Text style={styles.statsLabel}>So Beaut</Text>
+              </View>
+
+              <View style={styles.iconContainer}>
+                <Fontisto name={'share-a'} size={35} color="white" />
+                <Text style={styles.statsLabel}>12</Text>
+              </View>
+            </View>
+
+            <View style={styles.bottomContainer}>
+              <View>
+                <Text style={styles.handle}>@biance</Text>
+                <Text style={styles.description}>mmmmmmm</Text>
+
+                <View style={styles.songRow}>
+                  <Entypo name={'beamed-note'} size={24} color="white" />
+                  <Text style={styles.songName}>Koolios</Text>
+                </View>
+              </View>
+
+              {/* <Image
+                style={styles.songImage}
+                source={{uri: post.song.imageUri}}
+              /> */}
+            </View>
           </View>
         </View>
-        <View style={styles.reactions}>
-          <View style={styles.lReactions}>
-            <Text style={styles.challengeName}>100 Squats in 5 Minutes</Text>
-          </View>
-        </View>
-      </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 }
 
 export default PostItem;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    borderRadius: 15,
-    padding: 5,
-  },
-  postHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 10,
-    backgroundColor: '#fff',
-  },
-  infoWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  body: {
-    // overflow: 'hidden',
-    alignItems: 'center',
-  },
-  bookmarkAddionNotification: {
-    position: 'absolute',
-    backgroundColor: '#fff',
-    paddingHorizontal: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: 44,
-    width: '100%',
-    borderBottomColor: '#ddd',
-    borderBottomWidth: 1,
-    bottom: -44,
-    left: 0,
-  },
-  btnGoToSaved: {
-    height: 44,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  bookmarkPreviewImage: {
-    height: 30,
-    width: 30,
-    borderRadius: 5,
-  },
-  avatar: {
-    borderColor: '#ddd',
-    borderWidth: 0.3,
-    height: 36,
-    width: 36,
-    borderRadius: 36,
-    marginRight: 10,
-  },
-  reactionsWrapper: {
-    padding: 10,
-  },
-  reactions: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  lReactions: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  btnViewCmt: {
-    marginVertical: 5,
-  },
-  commentInputWrapper: {
-    height: 24,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginVertical: 5,
-  },
-  commentIconsWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: 14.3 * 3 + 15,
-  },
-  commentAvatar: {
-    width: 24,
-    height: 24,
-    borderRadius: 24,
-  },
-  userName: {
-    fontWeight: '600',
-  },
-  challengeName: {
-    fontWeight: '600',
-    marginLeft: 5,
-  },
-});
