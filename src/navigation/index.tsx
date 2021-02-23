@@ -7,7 +7,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {navigationRef} from './rootNavigation';
 import RootTab from './RootTab';
 
-export type RootStackParamList = {};
+export type RootStackParamList = {
+  RootTab: undefined;
+};
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
