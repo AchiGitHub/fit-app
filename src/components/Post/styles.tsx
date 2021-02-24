@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bottomContainer: {
-    bottom: 50,
     width: '80%',
     padding: 15,
     flexDirection: 'row',

@@ -3,9 +3,11 @@ import {Image, Text, View} from 'react-native';
 import Video from 'react-native-video';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialIcons';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
 
 function PostItem() {
+  const insets = useSafeAreaInsets();
   return (
     <View style={styles.container}>
       <Video
@@ -29,7 +31,11 @@ function PostItem() {
         </View>
       </View>
       <View style={styles.uiContainer}>
-        <View style={styles.bottomContainer}>
+        <View
+          style={[
+            styles.bottomContainer,
+            {bottom: insets.top !== 0 ? insets.top : 15},
+          ]}>
           <View style={styles.likeContainer}>
             <AntDesign
               name={'heart'}
