@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import Video from 'react-native-video';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialIcons';
@@ -16,6 +16,18 @@ function PostItem() {
         repeat={true}
         paused={false}
       />
+      <View style={styles.userSlot}>
+        <View style={styles.userProfile}>
+          <Image
+            style={styles.profilePicture}
+            source={{
+              uri:
+                'https://images.unsplash.com/photo-1551833726-b6549cd73566?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+            }}
+          />
+          <Text style={styles.userName}>Yalla Habibi</Text>
+        </View>
+      </View>
       <View style={styles.uiContainer}>
         <View style={styles.bottomContainer}>
           <View style={styles.likeContainer}>
@@ -28,7 +40,9 @@ function PostItem() {
             <Text>7.2k</Text>
           </View>
           <View style={styles.challengeName}>
-            <Text numberOfLines={2}>100 Pushups in 10 minutes</Text>
+            <Text numberOfLines={2} style={styles.challengeNameText}>
+              100 Pushups in 10 minutes
+            </Text>
           </View>
           <View style={styles.likeContainer}>
             <MaterialCommunityIcons

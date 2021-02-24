@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={styles.main}>
+      <SafeAreaView edges={['bottom']} style={styles.bottomSafeArea}>
         <RootStackNavigation />
       </SafeAreaView>
     </>
@@ -29,7 +29,7 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({
-  main: {
+  bottomSafeArea: {
     flex: 1,
     backgroundColor: PRIMARY_COLOR,
   },

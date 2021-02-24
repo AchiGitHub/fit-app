@@ -11,7 +11,7 @@ function Home() {
         data={[1, 2, 3, 4, 5]}
         renderItem={() => <PostItem />}
         showsVerticalScrollIndicator={false}
-        snapToInterval={Dimensions.get('window').height - 130}
+        snapToInterval={Dimensions.get('window').height - 80}
         snapToAlignment={'start'}
         decelerationRate={'fast'}
         keyExtractor={(item, index) => index.toString()}
