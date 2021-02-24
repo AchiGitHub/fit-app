@@ -5,7 +5,7 @@ import {FONT_SIZE_14, PADDING_5} from '../../_styles/Typography';
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: Dimensions.get('window').height - 80,
+    height: Dimensions.get('window').height - 50,
   },
   video: {
     position: 'absolute',
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bottomContainer: {
-    bottom: 10,
+    bottom: 50,
     width: '80%',
     padding: 15,
     flexDirection: 'row',

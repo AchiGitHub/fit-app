@@ -21,6 +21,9 @@ const HomeTabs = () => {
           backgroundColor: PRIMARY_COLOR,
         },
         activeTintColor: '#fff',
+        style: {
+          height: 50,
+        },
       }}>
       <Tabs.Screen
         component={Home}
