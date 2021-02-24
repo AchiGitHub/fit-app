@@ -5,13 +5,13 @@ import {
 import React from 'react';
 import Login from '../containers/Login';
 
-export type AuthStackParamList = {
+export type AuthNavigationParamList = {
   Login: undefined;
 };
 
-const Stack = createStackNavigator<AuthStackParamList>();
+const Stack = createStackNavigator<AuthNavigationParamList>();
 
-const AuthStack = () => {
+const AuthNavigation = () => {
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
     gestureEnabled: false,
@@ -23,4 +23,4 @@ const AuthStack = () => {
   );
 };
 
-export default AuthStack;
+export default AuthNavigation;
