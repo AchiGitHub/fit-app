@@ -1,17 +1,10 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import {PADDING_5} from '../../_styles/Typography';
 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: Dimensions.get('window').height,
-  },
-  videPlayButton: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    zIndex: 100,
+    height: Dimensions.get('window').height - 130,
   },
   video: {
     position: 'absolute',
@@ -23,66 +16,28 @@ const styles = StyleSheet.create({
   uiContainer: {
     height: '100%',
     justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   bottomContainer: {
-    padding: 10,
+    bottom: 10,
+    width: '80%',
+    padding: 15,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'flex-end',
+    borderRadius: 30,
+    backgroundColor: 'rgba(217, 217, 217, 0.7)',
   },
-  handle: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '700',
-    marginBottom: 10,
-  },
-  description: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '300',
-    marginBottom: 10,
-  },
-  songRow: {
+  likeContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
   },
-  songName: {
-    color: '#fff',
-    fontSize: 16,
-    marginLeft: 5,
+  challengeName: {
+    flexDirection: 'row',
+    width: '80%',
+    justifyContent: 'center',
   },
-
-  songImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 5,
-    borderColor: '#4c4c4c',
-  },
-
-  //  right container
-  rightContainer: {
-    alignSelf: 'flex-end',
-    height: 300,
-    justifyContent: 'space-between',
-    marginRight: 5,
-  },
-  profilePicture: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 2,
-    borderColor: '#fff',
-  },
-
-  iconContainer: {
-    alignItems: 'center',
-  },
-  statsLabel: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '600',
-    marginTop: 5,
+  iconPadding: {
+    paddingRight: PADDING_5,
   },
 });
 
