@@ -15,7 +15,7 @@ function PostItem() {
       <TouchableWithoutFeedback>
         <View>
           <Video
-            source={require('../../assets/video.mp4')}
+            source={require('../../../assets/videos/video.mp4')}
             style={styles.video}
             onError={(e) => console.log(e)}
             resizeMode={'cover'}

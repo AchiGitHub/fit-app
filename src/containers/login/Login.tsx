@@ -1,8 +1,12 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 function Login() {
-  return <View style={styles.container} />;
+  return (
+    <View style={styles.container}>
+      <Text>Login</Text>
+    </View>
+  );
 }
 
 export default Login;

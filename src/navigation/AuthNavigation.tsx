@@ -3,7 +3,7 @@ import {
   StackNavigationOptions,
 } from '@react-navigation/stack';
 import React from 'react';
-import Login from '../containers/Login';
+import Login from '../containers/login/Login';
 
 export type AuthNavigationParamList = {
   Login: undefined;
