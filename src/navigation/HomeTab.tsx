@@ -6,6 +6,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {PRIMARY_COLOR} from '../_styles/Colors';
+import Profile from '../containers/Profile/Profile';
 
 export type HomeBottomTabParameters = {
   Feed: undefined;
@@ -57,7 +58,7 @@ const HomeTabs = () => {
         }}
       />
       <Tabs.Screen
-        component={Feed}
+        component={Profile}
         name="Profile"
         options={{
           tabBarIcon: ({color}) => (
