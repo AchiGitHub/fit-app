@@ -59,16 +59,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: SECONDARY_COLOR,
   },
-  userProfile: {
-    flexDirection: 'row',
-  },
-  userName: {
-    marginTop: 8,
-    marginLeft: 8,
-    fontSize: FONT_SIZE_14,
-    fontWeight: '600',
-    color: 'white',
-  },
   numberOfLikes: {
     color: 'white',
     fontWeight: 'bold',

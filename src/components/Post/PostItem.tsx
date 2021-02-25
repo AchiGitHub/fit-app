@@ -1,10 +1,11 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import Video from 'react-native-video';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialIcons';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
+import ProfilePhotoName from '../ProfilePhoto/ProfilePhotoName';
 
 function PostItem() {
   //get the safe area heights
@@ -20,16 +21,10 @@ function PostItem() {
         paused={false}
       />
       <View style={styles.userSlot}>
-        <View style={styles.userProfile}>
-          <Image
-            style={styles.profilePicture}
-            source={{
-              uri:
-                'https://images.unsplash.com/photo-1551833726-b6549cd73566?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-            }}
-          />
-          <Text style={styles.userName}>Yalla Habibi</Text>
-        </View>
+        <ProfilePhotoName
+          uri="https://images.unsplash.com/photo-1551833726-b6549cd73566?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+          small={true}
+        />
       </View>
       <View style={styles.uiContainer}>
         <View
