@@ -2,10 +2,10 @@ import React from 'react';
 import {Dimensions, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 // import {Text} from 'react-native';
-import PostItem from '../components/Post/PostItem';
-import {PRIMARY_COLOR} from '../_styles/Colors';
+import PostItem from '../../components/Post/PostItem';
+import {PRIMARY_COLOR} from '../../_styles/Colors';
 
-function Home() {
+function Feed() {
   return (
     <View style={{backgroundColor: PRIMARY_COLOR}}>
       <FlatList
@@ -21,4 +21,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Feed;

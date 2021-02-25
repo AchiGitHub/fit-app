@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../containers/Home';
+import Feed from '../containers/Feed/Feed';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -8,7 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {PRIMARY_COLOR} from '../_styles/Colors';
 
 export type HomeBottomTabParameters = {
-  Home: undefined;
+  Feed: undefined;
 };
 
 const Tabs = createBottomTabNavigator();
@@ -26,7 +26,7 @@ const HomeTabs = () => {
         },
       }}>
       <Tabs.Screen
-        component={Home}
+        component={Feed}
         name="Home"
         options={{
           tabBarIcon: ({color}) => (
@@ -35,7 +35,7 @@ const HomeTabs = () => {
         }}
       />
       <Tabs.Screen
-        component={Home}
+        component={Feed}
         name="Search"
         options={{
           tabBarIcon: ({color}) => (
@@ -44,7 +44,7 @@ const HomeTabs = () => {
         }}
       />
       <Tabs.Screen
-        component={Home}
+        component={Feed}
         name="Explore"
         options={{
           tabBarIcon: ({color}) => (
@@ -57,7 +57,7 @@ const HomeTabs = () => {
         }}
       />
       <Tabs.Screen
-        component={Home}
+        component={Feed}
         name="Profile"
         options={{
           tabBarIcon: ({color}) => (
