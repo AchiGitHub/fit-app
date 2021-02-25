@@ -7,6 +7,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
 
 function PostItem() {
+  //get the safe area heights
   const insets = useSafeAreaInsets();
   return (
     <View style={styles.container}>
