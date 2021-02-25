@@ -27,23 +27,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingRight: 10,
   },
-  rankContainer: {
-    alignItems: 'center',
-    paddingLeft: 10,
-  },
-  challengeName: {
-    flexDirection: 'row',
-    width: '70%',
-    justifyContent: 'center',
-    borderRadius: 30,
-    backgroundColor: 'rgba(217, 217, 217, 0.7)',
-    padding: 15,
-  },
-  challengeNameText: {
-    fontWeight: '600',
-    alignSelf: 'center',
-    textAlign: 'center',
-  },
   iconPadding: {
     paddingRight: PADDING_5,
   },
@@ -58,11 +41,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderWidth: 2,
     borderColor: SECONDARY_COLOR,
-  },
-  numberOfLikes: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 16,
   },
 });
 

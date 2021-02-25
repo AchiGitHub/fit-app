@@ -1,11 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import Video from 'react-native-video';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialIcons';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
 import ProfilePhotoName from '../ProfilePhoto/ProfilePhotoName';
+import PostLikes from './PostLikes';
+import PostRank from './PostRank';
+import PostChallenge from './PostChallenge';
 
 function PostItem() {
   //get the safe area heights
@@ -32,23 +33,9 @@ function PostItem() {
             styles.bottomContainer,
             {bottom: insets.top !== 0 ? insets.top : 15},
           ]}>
-          <View style={styles.likeContainer}>
-            <AntDesign name={'heart'} size={38} color={'red'} />
-            <Text style={styles.numberOfLikes}>7.2k</Text>
-          </View>
-          <View style={styles.challengeName}>
-            <Text numberOfLines={2} style={styles.challengeNameText}>
-              100 Pushups in 10 minutes
-            </Text>
-          </View>
-          <View style={styles.rankContainer}>
-            <MaterialCommunityIcons
-              name={'leaderboard'}
-              size={40}
-              color={'green'}
-            />
-            <Text style={styles.numberOfLikes}>25</Text>
-          </View>
+          <PostLikes />
+          <PostChallenge />
+          <PostRank />
         </View>
       </View>
     </View>
