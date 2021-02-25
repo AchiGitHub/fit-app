@@ -38,27 +38,21 @@ function PostItem() {
             {bottom: insets.top !== 0 ? insets.top : 15},
           ]}>
           <View style={styles.likeContainer}>
-            <AntDesign
-              name={'heart'}
-              size={15}
-              color={'red'}
-              style={styles.iconPadding}
-            />
-            <Text>7.2k</Text>
+            <AntDesign name={'heart'} size={38} color={'red'} />
+            <Text style={styles.numberOfLikes}>7.2k</Text>
           </View>
           <View style={styles.challengeName}>
             <Text numberOfLines={2} style={styles.challengeNameText}>
               100 Pushups in 10 minutes
             </Text>
           </View>
-          <View style={styles.likeContainer}>
+          <View style={styles.rankContainer}>
             <MaterialCommunityIcons
               name={'leaderboard'}
-              size={15}
+              size={40}
               color={'green'}
-              style={styles.iconPadding}
             />
-            <Text>25</Text>
+            <Text style={styles.numberOfLikes}>25</Text>
           </View>
         </View>
       </View>

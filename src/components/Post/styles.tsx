@@ -20,24 +20,33 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bottomContainer: {
-    width: '80%',
-    padding: 15,
+    // width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    alignItems: 'flex-end',
-    borderRadius: 30,
-    backgroundColor: 'rgba(217, 217, 217, 0.7)',
+    // alignItems: 'flex-end',
   },
   likeContainer: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
+    alignItems: 'center',
+    paddingRight: 10,
+  },
+  rankContainer: {
+    // flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 10,
   },
   challengeName: {
     flexDirection: 'row',
-    width: '80%',
+    width: '70%',
     justifyContent: 'center',
+    borderRadius: 30,
+    backgroundColor: 'rgba(217, 217, 217, 0.7)',
+    padding: 15,
   },
   challengeNameText: {
     fontWeight: '600',
+    alignSelf: 'center',
+    textAlign: 'center',
   },
   iconPadding: {
     paddingRight: PADDING_5,
@@ -63,6 +72,11 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE_14,
     fontWeight: '600',
     color: 'white',
+  },
+  numberOfLikes: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 });
 
