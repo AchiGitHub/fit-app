@@ -20,18 +20,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bottomContainer: {
-    // width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    // alignItems: 'flex-end',
   },
   likeContainer: {
-    // flexDirection: 'row',
     alignItems: 'center',
     paddingRight: 10,
   },
   rankContainer: {
-    // flexDirection: 'row',
     alignItems: 'center',
     paddingLeft: 10,
   },
