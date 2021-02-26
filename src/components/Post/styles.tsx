@@ -1,6 +1,6 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import {SECONDARY_COLOR} from '../../_styles/Colors';
-import {FONT_SIZE_14, PADDING_5} from '../../_styles/Typography';
+import {PADDING_5} from '../../_styles/Typography';
 
 const styles = StyleSheet.create({
   container: {

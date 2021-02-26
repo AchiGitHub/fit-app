@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {FONT_SIZE_25} from '../../_styles/Typography';
+import {FONT_SIZE_18} from '../../_styles/Typography';
 
 type Props = {
   value: string;
@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   numberText: {
-    fontSize: FONT_SIZE_25,
+    fontSize: FONT_SIZE_18,
     fontWeight: 'bold',
   },
   context: {
     color: '#bdbdbd',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
 });

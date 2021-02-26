@@ -33,7 +33,12 @@ function PostItem() {
             styles.bottomContainer,
             {bottom: insets.top !== 0 ? insets.top : 15},
           ]}>
-          <PostLikes />
+          <PostLikes
+            iconColor="red"
+            numberOfLikes="7.2k"
+            iconSize={38}
+            flexRow={false}
+          />
           <PostChallenge />
           <PostRank />
         </View>
