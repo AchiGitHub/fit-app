@@ -3,7 +3,7 @@ import Feed from '../containers/Feed/Feed';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {PRIMARY_COLOR} from '../_styles/Colors';
 import Profile from '../containers/Profile/Profile';
@@ -46,14 +46,10 @@ const HomeTabs = () => {
       />
       <Tabs.Screen
         component={Feed}
-        name="Explore"
+        name="Challenges"
         options={{
           tabBarIcon: ({color}) => (
-            <MaterialCommunityIcons
-              name={'message-minus-outline'}
-              size={25}
-              color={color}
-            />
+            <MaterialIcons name={'leaderboard'} size={25} color={color} />
           ),
         }}
       />
