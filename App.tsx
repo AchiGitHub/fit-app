@@ -13,7 +13,7 @@ import React from 'react';
 
 import RootStackNavigation from './src/navigation';
 
-const App = (): JSX.Element => {
+const App = () => {
   return <RootStackNavigation />;
 };
 

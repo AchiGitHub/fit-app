@@ -12,7 +12,7 @@ export type HomeNavigationParamList = {
 
 const Stack = createStackNavigator<HomeNavigationParamList>();
 
-const HomeNavigation = (): JSX.Element => {
+const HomeNavigation = () => {
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
     gestureEnabled: false,

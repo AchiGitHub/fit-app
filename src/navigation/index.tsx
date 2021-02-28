@@ -11,7 +11,7 @@ import AuthNavigation from './AuthNavigation';
 
 const RootStack = createStackNavigator();
 
-const RootStackNavigation = (): JSX.Element => {
+const RootStackNavigation = () => {
   const loggedIn = false;
 
   const navigationOptions: StackNavigationOptions = {

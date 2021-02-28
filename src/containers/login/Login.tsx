@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 
 import {FONTS} from '../../../constants';
 
-function Login(): JSX.Element {
+function Login() {
   return (
     <View>
       <Text style={{...FONTS.h1}}>Login</Text>

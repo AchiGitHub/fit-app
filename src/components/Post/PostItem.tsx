@@ -9,7 +9,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 
 import styles from './styles';
 
-function PostItem(): JSX.Element {
+function PostItem() {
   return (
     <View style={styles.container}>
       <TouchableWithoutFeedback>

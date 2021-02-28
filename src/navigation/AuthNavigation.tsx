@@ -12,7 +12,7 @@ export type AuthNavigationParamList = {
 
 const Stack = createStackNavigator<AuthNavigationParamList>();
 
-const AuthNavigation = (): JSX.Element => {
+const AuthNavigation = () => {
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
     gestureEnabled: false,
