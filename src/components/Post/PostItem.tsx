@@ -1,11 +1,12 @@
 import React from 'react';
+
 import {Text, TouchableOpacity, View} from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
-import Video from 'react-native-video';
-import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import Video from 'react-native-video';
 
 import styles from './styles';
 

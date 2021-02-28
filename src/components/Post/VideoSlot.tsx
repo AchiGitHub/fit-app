@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Dimensions, ImageBackground, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 

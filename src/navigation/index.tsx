@@ -1,13 +1,14 @@
 import React from 'react';
+
+import {NavigationContainer} from '@react-navigation/native';
 import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
 
-import {navigationRef} from './rootNavigation';
-import HomeNavigation from './HomeNavigation';
 import AuthNavigation from './AuthNavigation';
+import HomeNavigation from './HomeNavigation';
+import {navigationRef} from './rootNavigation';
 
 const RootStack = createStackNavigator();
 
@@ -24,6 +25,7 @@ const RootStackNavigation = () => {
     <NavigationContainer ref={navigationRef}>
       <RootStack.Navigator
         initialRouteName="RootTab"
+        headerMode="none"
         screenOptions={navigationOptions}>
         {loggedIn ? (
           <RootStack.Screen name="HomeTab" component={HomeNavigation} />

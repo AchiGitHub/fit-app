@@ -1,14 +1,20 @@
 import React from 'react';
-import {Text, View} from 'react-native';
 
-import {FONTS} from '../../../constants';
+import {StyleSheet, Text, View} from 'react-native';
 
 function Login() {
   return (
-    <View>
-      <Text style={{...FONTS.h1}}>Login</Text>
+    <View style={styles.loginContainer}>
+      <Text>Hello</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  loginContainer: {
+    flex: 1,
+    backgroundColor: 'cyan',
+  },
+});
 
 export default Login;

@@ -1,8 +1,9 @@
+import React from 'react';
+
 import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
-import React from 'react';
 
 import Home from '../containers/Home';
 
