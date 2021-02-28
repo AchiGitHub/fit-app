@@ -10,9 +10,10 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
+
 import RootStackNavigation from './src/navigation';
 
-const App = () => {
+const App = (): JSX.Element => {
   return <RootStackNavigation />;
 };
 

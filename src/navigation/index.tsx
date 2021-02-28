@@ -4,8 +4,8 @@ import {
   StackNavigationOptions,
 } from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {navigationRef} from './rootNavigation';
 
+import {navigationRef} from './rootNavigation';
 import HomeNavigation from './HomeNavigation';
 import AuthNavigation from './AuthNavigation';
 

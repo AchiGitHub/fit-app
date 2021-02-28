@@ -3,6 +3,7 @@ import {
   StackNavigationOptions,
 } from '@react-navigation/stack';
 import React from 'react';
+
 import Home from '../containers/Home';
 
 export type HomeNavigationParamList = {
@@ -11,7 +12,7 @@ export type HomeNavigationParamList = {
 
 const Stack = createStackNavigator<HomeNavigationParamList>();
 
-const HomeNavigation = () => {
+const HomeNavigation = (): JSX.Element => {
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
     gestureEnabled: false,

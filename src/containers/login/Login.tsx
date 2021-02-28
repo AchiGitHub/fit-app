@@ -1,18 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 
-function Login() {
+import {FONTS} from '../../../constants';
+
+function Login(): JSX.Element {
   return (
-    <View style={styles.container}>
-      <Text>Login</Text>
+    <View>
+      <Text style={{...FONTS.h1}}>Login</Text>
     </View>
   );
 }
 
 export default Login;
-
-const styles = StyleSheet.create({
-  container: {
-    marginHorizontal: 5,
-  },
-});

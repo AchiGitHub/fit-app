@@ -2,14 +2,14 @@ import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import Video from 'react-native-video';
-
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+
 import styles from './styles';
 
-function PostItem() {
+function PostItem(): JSX.Element {
   return (
     <View style={styles.container}>
       <TouchableWithoutFeedback>
@@ -17,7 +17,7 @@ function PostItem() {
           <Video
             source={require('../../../assets/videos/video.mp4')}
             style={styles.video}
-            onError={(e) => console.log(e)}
+            onError={(e): void => console.log(e)}
             resizeMode={'cover'}
             repeat={true}
             // paused={paused}

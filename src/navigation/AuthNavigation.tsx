@@ -3,6 +3,7 @@ import {
   StackNavigationOptions,
 } from '@react-navigation/stack';
 import React from 'react';
+
 import Login from '../containers/login/Login';
 
 export type AuthNavigationParamList = {
@@ -11,7 +12,7 @@ export type AuthNavigationParamList = {
 
 const Stack = createStackNavigator<AuthNavigationParamList>();
 
-const AuthNavigation = () => {
+const AuthNavigation = (): JSX.Element => {
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
     gestureEnabled: false,
