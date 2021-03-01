@@ -42,6 +42,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: SECONDARY_COLOR,
   },
+  tryChallenge: {
+    position: 'absolute',
+    right: 10,
+    top: '5%',
+    backgroundColor: '#E7357B',
+    borderRadius: 20,
+  },
 });
 
 export default styles;
