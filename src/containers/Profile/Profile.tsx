@@ -39,7 +39,7 @@ function Profile() {
                     idx % 3 !== 0 ? {paddingLeft: 2} : {paddingLeft: 0},
                   ]}>
                   <Video
-                    source={require('../../assets/video.mp4')}
+                    source={require('../../../assets/videos/video.mp4')}
                     style={styles.videoContainer}
                     resizeMode={'cover'}
                     paused={true}
