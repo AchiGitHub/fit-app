@@ -1,75 +1,59 @@
 import React from 'react';
-
-import {Text, TouchableOpacity, View} from 'react-native';
-import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import Entypo from 'react-native-vector-icons/Entypo';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Fontisto from 'react-native-vector-icons/Fontisto';
+import {Text, View} from 'react-native';
 import Video from 'react-native-video';
-
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
+import ProfilePhotoName from '../ProfilePhoto/ProfilePhotoName';
+import PostLikes from './PostLikes';
+import PostRank from './PostRank';
+import PostChallenge from './PostChallenge';
 
 function PostItem() {
+  //get the safe area heights
+  const insets = useSafeAreaInsets();
   return (
     <View style={styles.container}>
-      <TouchableWithoutFeedback>
-        <View>
-          <Video
-            source={require('../../../assets/videos/video.mp4')}
-            style={styles.video}
-            onError={(e): void => console.log(e)}
-            resizeMode={'cover'}
-            repeat={true}
-            // paused={paused}
+      <Video
+        source={require('../../assets/video.mp4')}
+        style={styles.video}
+        onError={(e) => console.log(e)}
+        resizeMode={'cover'}
+        repeat={true}
+        paused={false}
+      />
+      <View style={styles.userSlot}>
+        <ProfilePhotoName
+          uri="https://images.unsplash.com/photo-1551833726-b6549cd73566?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+          small={true}
+        />
+      </View>
+      {/* <View style={styles.tryChallenge}>
+        <Text
+          style={{
+            paddingLeft: 30,
+            paddingRight: 30,
+            paddingTop: 10,
+            paddingBottom: 10,
+          }}>
+          Try
+        </Text>
+      </View> */}
+      <View style={styles.uiContainer}>
+        <View
+          style={[
+            styles.bottomContainer,
+            {bottom: insets.top !== 0 ? insets.top : 15},
+          ]}>
+          <PostLikes
+            iconColor="red"
+            numberOfLikes="7.2k"
+            iconSize={38}
+            flexRow={false}
           />
-
-          <View style={styles.uiContainer}>
-            <View style={styles.rightContainer}>
-              {/* <Image
-                style={styles.profilePicture}
-                source={{uri: post.user.imageUri}}
-              /> */}
-
-              <TouchableOpacity style={styles.iconContainer}>
-                <AntDesign
-                  name={'heart'}
-                  size={40}
-                  color={true ? 'red' : 'white'}
-                />
-                <Text style={styles.statsLabel}>1,233,422</Text>
-              </TouchableOpacity>
-
-              <View style={styles.iconContainer}>
-                <FontAwesome name={'commenting'} size={40} color="white" />
-                <Text style={styles.statsLabel}>So Beaut</Text>
-              </View>
-
-              <View style={styles.iconContainer}>
-                <Fontisto name={'share-a'} size={35} color="white" />
-                <Text style={styles.statsLabel}>12</Text>
-              </View>
-            </View>
-
-            <View style={styles.bottomContainer}>
-              <View>
-                <Text style={styles.handle}>@biance</Text>
-                <Text style={styles.description}>mmmmmmm</Text>
-
-                <View style={styles.songRow}>
-                  <Entypo name={'beamed-note'} size={24} color="white" />
-                  <Text style={styles.songName}>Koolios</Text>
-                </View>
-              </View>
-
-              {/* <Image
-                style={styles.songImage}
-                source={{uri: post.song.imageUri}}
-              /> */}
-            </View>
-          </View>
+          <PostChallenge />
+          <PostRank />
         </View>
-      </TouchableWithoutFeedback>
+      </View>
     </View>
   );
 }

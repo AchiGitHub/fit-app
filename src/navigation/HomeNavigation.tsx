@@ -1,28 +1,69 @@
 import React from 'react';
+import Feed from '../containers/Feed/Feed';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Entypo from 'react-native-vector-icons/Entypo';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {PRIMARY_COLOR} from '../_styles/Colors';
+import Profile from '../containers/Profile/Profile';
 
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from '@react-navigation/stack';
-
-import Home from '../containers/Home';
-
-export type HomeNavigationParamList = {
-  Login: undefined;
+export type HomeBottomTabParameters = {
+  Feed: undefined;
 };
 
-const Stack = createStackNavigator<HomeNavigationParamList>();
+const Tabs = createBottomTabNavigator();
 
-const HomeNavigation = () => {
-  const navigationOptions: StackNavigationOptions = {
-    headerShown: false,
-    gestureEnabled: false,
-  };
+const HomeTabs = () => {
   return (
-    <Stack.Navigator screenOptions={navigationOptions}>
-      <Stack.Screen component={Home} name="Login" />
-    </Stack.Navigator>
+    <Tabs.Navigator
+      tabBarOptions={{
+        tabStyle: {
+          backgroundColor: PRIMARY_COLOR,
+        },
+        activeTintColor: '#fff',
+        style: {
+          height: 50,
+        },
+      }}>
+      <Tabs.Screen
+        component={Feed}
+        name="Home"
+        options={{
+          tabBarIcon: ({color}) => (
+            <Entypo name={'home'} size={25} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        component={Feed}
+        name="Search"
+        options={{
+          tabBarIcon: ({color}) => (
+            <AntDesign name={'search1'} size={25} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        component={Feed}
+        name="Challenges"
+        options={{
+          tabBarIcon: ({color}) => (
+            <MaterialIcons name={'leaderboard'} size={25} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        component={Profile}
+        name="Profile"
+        options={{
+          tabBarIcon: ({color}) => (
+            <Ionicons name={'person-outline'} size={25} color={color} />
+          ),
+        }}
+      />
+    </Tabs.Navigator>
   );
 };
 
-export default HomeNavigation;
+export default HomeTabs;

@@ -1,17 +1,11 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import {SECONDARY_COLOR} from '../../_styles/Colors';
+import {PADDING_5} from '../../_styles/Typography';
 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: Dimensions.get('window').height,
-  },
-  videPlayButton: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    zIndex: 100,
+    height: Dimensions.get('window').height - 50,
   },
   video: {
     position: 'absolute',
@@ -23,66 +17,37 @@ const styles = StyleSheet.create({
   uiContainer: {
     height: '100%',
     justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   bottomContainer: {
-    padding: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    justifyContent: 'space-around',
   },
-  handle: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '700',
-    marginBottom: 10,
-  },
-  description: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '300',
-    marginBottom: 10,
-  },
-  songRow: {
-    flexDirection: 'row',
+  likeContainer: {
     alignItems: 'center',
+    paddingRight: 10,
   },
-  songName: {
-    color: '#fff',
-    fontSize: 16,
-    marginLeft: 5,
+  iconPadding: {
+    paddingRight: PADDING_5,
   },
-
-  songImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 5,
-    borderColor: '#4c4c4c',
-  },
-
-  //  right container
-  rightContainer: {
-    alignSelf: 'flex-end',
-    height: 300,
-    justifyContent: 'space-between',
-    marginRight: 5,
+  userSlot: {
+    position: 'absolute',
+    top: '5%',
+    left: 10,
   },
   profilePicture: {
-    width: 50,
-    height: 50,
+    width: 35,
+    height: 35,
     borderRadius: 25,
     borderWidth: 2,
-    borderColor: '#fff',
+    borderColor: SECONDARY_COLOR,
   },
-
-  iconContainer: {
-    alignItems: 'center',
-  },
-  statsLabel: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '600',
-    marginTop: 5,
+  tryChallenge: {
+    position: 'absolute',
+    right: 10,
+    top: '5%',
+    backgroundColor: '#E7357B',
+    borderRadius: 20,
   },
 });
 
