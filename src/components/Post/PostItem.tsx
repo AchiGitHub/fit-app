@@ -17,7 +17,7 @@ function PostItem() {
   return (
     <View style={styles.container}>
       <Video
-        source={require('../../assets/video.mp4')}
+        source={require('../../../assets/videos/video.mp4')}
         style={styles.video}
         onError={(e) => console.log(e)}
         resizeMode={'cover'}

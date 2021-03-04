@@ -13,7 +13,7 @@ import {navigationRef} from './rootNavigation';
 const RootStack = createStackNavigator();
 
 const RootStackNavigation = () => {
-  const loggedIn = false;
+  const loggedIn = true;
 
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
