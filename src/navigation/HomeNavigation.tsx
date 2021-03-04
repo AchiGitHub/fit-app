@@ -1,11 +1,13 @@
 import React from 'react';
-import Feed from '../containers/Feed/Feed';
+
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 import {PRIMARY_COLOR} from '../_styles/Colors';
+import Feed from '../containers/Feed/Feed';
 import Profile from '../containers/Profile/Profile';
 
 export type HomeBottomTabParameters = {

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Image, StyleSheet} from 'react-native';
+
 import {SECONDARY_COLOR} from '../../_styles/Colors';
 
 type Props = {

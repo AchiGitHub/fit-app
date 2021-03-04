@@ -1,12 +1,15 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import Video from 'react-native-video';
+
+import {View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import styles from './styles';
+import Video from 'react-native-video';
+
 import ProfilePhotoName from '../ProfilePhoto/ProfilePhotoName';
+
+import PostChallenge from './PostChallenge';
 import PostLikes from './PostLikes';
 import PostRank from './PostRank';
-import PostChallenge from './PostChallenge';
+import styles from './styles';
 
 function PostItem() {
   //get the safe area heights
@@ -42,6 +45,7 @@ function PostItem() {
         <View
           style={[
             styles.bottomContainer,
+            // eslint-disable-next-line react-native/no-inline-styles
             {bottom: insets.top !== 0 ? insets.top : 15},
           ]}>
           <PostLikes

@@ -1,9 +1,11 @@
 import React from 'react';
+
 import {Dimensions, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
+
 // import {Text} from 'react-native';
-import PostItem from '../../components/Post/PostItem';
 import {PRIMARY_COLOR} from '../../_styles/Colors';
+import PostItem from '../../components/Post/PostItem';
 
 function Feed() {
   return (

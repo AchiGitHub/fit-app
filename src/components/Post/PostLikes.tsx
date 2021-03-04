@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {StyleSheet, Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -14,6 +15,7 @@ function PostLikes({iconColor, iconSize, numberOfLikes, flexRow}: Props) {
     <View
       style={[
         styles.likeContainer,
+        // eslint-disable-next-line react-native/no-inline-styles
         flexRow === true ? {flexDirection: 'row'} : {},
       ]}>
       <AntDesign name={'heart'} size={iconSize} color={iconColor} />
