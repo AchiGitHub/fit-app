@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {StyleSheet, Text} from 'react-native';
+
 import {FONT_SIZE_22} from '../../_styles/Typography';
 import ProfilePhoto from '../ProfilePhoto/ProfilePhoto';
 

@@ -1,33 +1,40 @@
 import React from 'react';
+
+import {NavigationContainer} from '@react-navigation/native';
 import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+
+import AuthNavigation from './AuthNavigation';
+import HomeNavigation from './HomeNavigation';
 import {navigationRef} from './rootNavigation';
-import RootTab from './RootTab';
 
-export type RootStackParamList = {
-  RootTab: undefined;
-};
+const RootStack = createStackNavigator();
 
-const RootStack = createStackNavigator<RootStackParamList>();
+const RootStackNavigation = () => {
+  const loggedIn = true;
 
-const index = (): JSX.Element => {
   const navigationOptions: StackNavigationOptions = {
     headerShown: false,
     gestureEnabled: false,
     cardStyle: {},
   };
+
   return (
     <NavigationContainer ref={navigationRef}>
       <RootStack.Navigator
         initialRouteName="RootTab"
+        headerMode="none"
         screenOptions={navigationOptions}>
-        <RootStack.Screen name="RootTab" component={RootTab} />
+        {loggedIn ? (
+          <RootStack.Screen name="HomeTab" component={HomeNavigation} />
+        ) : (
+          <RootStack.Screen name="AuthStack" component={AuthNavigation} />
+        )}
       </RootStack.Navigator>
     </NavigationContainer>
   );
 };
 
-export default index;
+export default RootStackNavigation;

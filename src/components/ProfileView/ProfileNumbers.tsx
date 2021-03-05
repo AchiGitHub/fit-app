@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {StyleSheet, Text, View} from 'react-native';
+
 import {FONT_SIZE_18} from '../../_styles/Typography';
 
 type Props = {

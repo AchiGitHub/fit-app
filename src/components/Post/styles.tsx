@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+
 import {SECONDARY_COLOR} from '../../_styles/Colors';
 import {PADDING_5} from '../../_styles/Typography';
 

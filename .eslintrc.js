@@ -1,11 +1,26 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  extends: ['@react-native-community'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import'],
   rules: {
-    'prettier/prettier': [
+    'import/order': [
       'error',
       {
-        endOfLine: 'auto',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        'newlines-between': 'always',
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
       },
     ],
   },

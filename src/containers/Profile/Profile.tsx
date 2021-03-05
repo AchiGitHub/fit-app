@@ -1,8 +1,10 @@
 import React from 'react';
-import {Dimensions, StyleSheet, View} from 'react-native';
+
+import {Dimensions, StatusBar, StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
+
 import PostLikes from '../../components/Post/PostLikes';
 import ProfileNumbers from '../../components/ProfileView/ProfileNumbers';
 import ProfileView from '../../components/ProfileView/ProfileView';
@@ -32,10 +34,11 @@ function Profile() {
                   key={idx}
                   style={[
                     styles.imageContainer,
+                    // eslint-disable-next-line react-native/no-inline-styles
                     idx % 3 !== 0 ? {paddingLeft: 2} : {paddingLeft: 0},
                   ]}>
                   <Video
-                    source={require('../../assets/video.mp4')}
+                    source={require('../../../assets/videos/video.mp4')}
                     style={styles.videoContainer}
                     resizeMode={'cover'}
                     paused={true}
