@@ -7,6 +7,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {PRIMARY_COLOR} from '../_styles/Colors';
 import Profile from '../containers/Profile/Profile';
+import Challenges from '../containers/Challenges/Challenges';
 
 export type HomeBottomTabParameters = {
   Feed: undefined;
@@ -45,7 +46,7 @@ const HomeTabs = () => {
         }}
       />
       <Tabs.Screen
-        component={Feed}
+        component={Challenges}
         name="Challenges"
         options={{
           tabBarIcon: ({color}) => (

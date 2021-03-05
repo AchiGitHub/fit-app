@@ -27,17 +27,9 @@ function PostItem() {
           small={true}
         />
       </View>
-      {/* <View style={styles.tryChallenge}>
-        <Text
-          style={{
-            paddingLeft: 30,
-            paddingRight: 30,
-            paddingTop: 10,
-            paddingBottom: 10,
-          }}>
-          Try
-        </Text>
-      </View> */}
+      <View style={styles.tryChallenge}>
+        <Text style={styles.challengeText}>Try it!</Text>
+      </View>
       <View style={styles.uiContainer}>
         <View
           style={[

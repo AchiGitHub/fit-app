@@ -18,7 +18,7 @@ import {PRIMARY_COLOR} from './src/_styles/Colors';
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="dark-content" />
       <SafeAreaView edges={['bottom']} style={styles.bottomSafeArea}>
         <RootStackNavigation />
       </SafeAreaView>

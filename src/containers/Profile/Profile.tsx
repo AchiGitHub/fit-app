@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions, StatusBar, StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
@@ -12,7 +12,6 @@ const {width, height} = Dimensions.get('window');
 function Profile() {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
       <ScrollView
         style={styles.container}
         bounces={false}
