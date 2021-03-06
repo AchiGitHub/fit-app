@@ -3,7 +3,7 @@ import * as React from 'react';
 import {
   StackActions,
   NavigationContainerRef,
-  NavigationAction,
+  NavigationAction
 } from '@react-navigation/native';
 
 export const navigationRef: React.RefObject<NavigationContainerRef> = React.createRef();
@@ -28,5 +28,5 @@ export const navigation = {
   dispatch,
   replace,
   push,
-  goBack,
+  goBack
 };

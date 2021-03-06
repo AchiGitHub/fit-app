@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 function PostChallenge() {
   return (
@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 30,
     backgroundColor: 'rgba(217, 217, 217, 0.7)',
-    padding: 15,
+    padding: 15
   },
   challengeNameText: {
     fontWeight: '600',
     alignSelf: 'center',
-    textAlign: 'center',
-  },
+    textAlign: 'center'
+  }
 });

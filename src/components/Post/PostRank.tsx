@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialIcons';
 
 function PostRank() {
@@ -17,11 +17,11 @@ export default PostRank;
 const styles = StyleSheet.create({
   rankContainer: {
     alignItems: 'center',
-    paddingLeft: 10,
+    paddingLeft: 10
   },
   rankNumber: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 function Login() {
   return (
@@ -13,12 +13,12 @@ function Login() {
 const styles = StyleSheet.create({
   loginContainer: {
     flex: 1,
-    backgroundColor: 'cyan',
+    backgroundColor: 'cyan'
   },
   text: {
     fontFamily: 'SF-Pro-Text-Bold',
-    fontSize: 56,
-  },
+    fontSize: 56
+  }
 });
 
 export default Login;

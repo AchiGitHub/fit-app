@@ -1,15 +1,15 @@
 import React from 'react';
 
-import {Dimensions, View} from 'react-native';
-import {FlatList} from 'react-native-gesture-handler';
+import { Dimensions, View } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 
 // import {Text} from 'react-native';
-import {PRIMARY_COLOR} from '../../_styles/Colors';
+import { PRIMARY_COLOR } from '../../_styles/Colors';
 import PostItem from '../../components/Post/PostItem';
 
 function Feed() {
   return (
-    <View style={{backgroundColor: PRIMARY_COLOR}}>
+    <View style={{ backgroundColor: PRIMARY_COLOR }}>
       <FlatList
         data={[1, 2, 3, 4, 5]}
         renderItem={() => <PostItem />}

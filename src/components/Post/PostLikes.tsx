@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 type Props = {
@@ -10,13 +10,13 @@ type Props = {
   flexRow: boolean;
 };
 
-function PostLikes({iconColor, iconSize, numberOfLikes, flexRow}: Props) {
+function PostLikes({ iconColor, iconSize, numberOfLikes, flexRow }: Props) {
   return (
     <View
       style={[
         styles.likeContainer,
         // eslint-disable-next-line react-native/no-inline-styles
-        flexRow === true ? {flexDirection: 'row'} : {},
+        flexRow === true ? { flexDirection: 'row' } : {}
       ]}>
       <AntDesign name={'heart'} size={iconSize} color={iconColor} />
       <Text style={styles.numberOfLikes}>{numberOfLikes}</Text>
@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
   numberOfLikes: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 16
   },
   likeContainer: {
     alignItems: 'center',
-    paddingRight: 10,
-  },
+    paddingRight: 10
+  }
 });

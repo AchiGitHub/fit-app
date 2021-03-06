@@ -1,36 +1,26 @@
 import React from 'react';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { AppRoutes } from '../constants/routes';
 
 import AuthNavigation from './AuthNavigation';
 import HomeNavigation from './HomeNavigation';
-import {navigationRef} from './rootNavigation';
+import { navigationRef } from './rootNavigation';
 
-const RootStack = createStackNavigator();
+const RootStack = createStackNavigator<AppRoutes>();
 
 const RootStackNavigation = () => {
-  const loggedIn = true;
-
-  const navigationOptions: StackNavigationOptions = {
-    headerShown: false,
-    gestureEnabled: false,
-    cardStyle: {},
-  };
+  const loggedIn = false;
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <RootStack.Navigator
-        initialRouteName="RootTab"
-        headerMode="none"
-        screenOptions={navigationOptions}>
+      <RootStack.Navigator headerMode="none">
         {loggedIn ? (
-          <RootStack.Screen name="HomeTab" component={HomeNavigation} />
+          <RootStack.Screen name="Feed" component={HomeNavigation} />
         ) : (
-          <RootStack.Screen name="AuthStack" component={AuthNavigation} />
+          <RootStack.Screen name="Login" component={AuthNavigation} />
         )}
       </RootStack.Navigator>
     </NavigationContainer>

@@ -1,25 +1,15 @@
 import React from 'react';
 
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
+import { AppRoutes } from '../constants/routes';
 import Login from '../containers/login/Login';
 
-export type AuthNavigationParamList = {
-  Login: undefined;
-};
-
-const Stack = createStackNavigator<AuthNavigationParamList>();
+const Stack = createStackNavigator<AppRoutes>();
 
 const AuthNavigation = () => {
-  const navigationOptions: StackNavigationOptions = {
-    headerShown: false,
-    gestureEnabled: false,
-  };
   return (
-    <Stack.Navigator screenOptions={navigationOptions}>
+    <Stack.Navigator headerMode="none">
       <Stack.Screen component={Login} name="Login" />
     </Stack.Navigator>
   );
