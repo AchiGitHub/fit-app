@@ -1,67 +1,64 @@
 import React from 'react';
 
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-import {PRIMARY_COLOR} from '../_styles/Colors';
+import { PRIMARY_COLOR } from '../_styles/Colors';
+import { AppRoutes } from '../constants/routes';
 import Feed from '../containers/Feed/Feed';
 import Profile from '../containers/Profile/Profile';
 
-export type HomeBottomTabParameters = {
-  Feed: undefined;
-};
-
-const Tabs = createBottomTabNavigator();
+const Tabs = createBottomTabNavigator<AppRoutes>();
 
 const HomeTabs = () => {
   return (
     <Tabs.Navigator
       tabBarOptions={{
         tabStyle: {
-          backgroundColor: PRIMARY_COLOR,
+          backgroundColor: PRIMARY_COLOR
         },
         activeTintColor: '#fff',
         style: {
-          height: 50,
-        },
+          height: 50
+        }
       }}>
       <Tabs.Screen
         component={Feed}
-        name="Home"
+        name="Feed"
         options={{
-          tabBarIcon: ({color}) => (
+          tabBarIcon: ({ color }) => (
             <Entypo name={'home'} size={25} color={color} />
-          ),
+          )
         }}
       />
       <Tabs.Screen
         component={Feed}
         name="Search"
         options={{
-          tabBarIcon: ({color}) => (
+          tabBarIcon: ({ color }) => (
             <AntDesign name={'search1'} size={25} color={color} />
-          ),
+          )
         }}
       />
       <Tabs.Screen
         component={Feed}
         name="Challenges"
         options={{
-          tabBarIcon: ({color}) => (
+          tabBarIcon: ({ color }) => (
             <MaterialIcons name={'leaderboard'} size={25} color={color} />
-          ),
+          )
         }}
       />
       <Tabs.Screen
         component={Profile}
-        name="Profile"
+        name="MyProfile"
         options={{
-          tabBarIcon: ({color}) => (
+          tabBarIcon: ({ color }) => (
             <Ionicons name={'person-outline'} size={25} color={color} />
-          ),
+          )
         }}
       />
     </Tabs.Navigator>

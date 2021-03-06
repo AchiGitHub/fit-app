@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import { View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Video from 'react-native-video';
 
 import ProfilePhotoName from '../ProfilePhoto/ProfilePhotoName';
@@ -46,7 +46,7 @@ function PostItem() {
           style={[
             styles.bottomContainer,
             // eslint-disable-next-line react-native/no-inline-styles
-            {bottom: insets.top !== 0 ? insets.top : 15},
+            { bottom: insets.top !== 0 ? insets.top : 15 }
           ]}>
           <PostLikes
             iconColor="red"

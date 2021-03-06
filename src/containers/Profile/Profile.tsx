@@ -1,15 +1,15 @@
 import React from 'react';
 
-import {Dimensions, StatusBar, StyleSheet, View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { Dimensions, StatusBar, StyleSheet, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Video from 'react-native-video';
 
 import PostLikes from '../../components/Post/PostLikes';
 import ProfileNumbers from '../../components/ProfileView/ProfileNumbers';
 import ProfileView from '../../components/ProfileView/ProfileView';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 function Profile() {
   return (
@@ -36,7 +36,7 @@ function Profile() {
                   style={[
                     styles.imageContainer,
                     // eslint-disable-next-line react-native/no-inline-styles
-                    idx % 3 !== 0 ? {paddingLeft: 2} : {paddingLeft: 0},
+                    idx % 3 !== 0 ? { paddingLeft: 2 } : { paddingLeft: 0 }
                   ]}>
                   <Video
                     source={require('../../../assets/videos/video.mp4')}
@@ -68,35 +68,35 @@ export default Profile;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'white'
   },
   profilePhoto: {
     alignItems: 'center',
-    marginTop: height * 0.05,
+    marginTop: height * 0.05
   },
   numbersContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginTop: 20,
+    marginTop: 20
   },
   postsContainer: {
     paddingTop: 20,
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap'
   },
   imageContainer: {
     width: width / 3,
     height: width / 1.5,
-    marginBottom: 2,
+    marginBottom: 2
   },
   likesContainer: {
     position: 'absolute',
     bottom: 0,
-    left: 5,
+    left: 5
   },
   videoContainer: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 const posts = [1, 2, 3, 4, 5, 6, 7];

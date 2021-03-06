@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {StyleSheet, Text} from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
-import {FONT_SIZE_22} from '../../_styles/Typography';
+import { FONT_SIZE_22 } from '../../_styles/Typography';
 import ProfilePhoto from '../ProfilePhoto/ProfilePhoto';
 
 function ProfileView() {
@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
   profileName: {
     marginTop: 10,
     fontWeight: 'bold',
-    fontSize: FONT_SIZE_22,
-  },
+    fontSize: FONT_SIZE_22
+  }
 });
