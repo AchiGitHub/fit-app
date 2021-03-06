@@ -14,7 +14,6 @@ const { width, height } = Dimensions.get('window');
 function Profile() {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
       <ScrollView
         style={styles.container}
         bounces={false}

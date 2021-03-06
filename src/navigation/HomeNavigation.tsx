@@ -10,6 +10,7 @@ import { PRIMARY_COLOR } from '../_styles/Colors';
 import { AppRoutes } from '../constants/routes';
 import Feed from '../containers/Feed/Feed';
 import Profile from '../containers/Profile/Profile';
+import Challenges from '../containers/Challenges/Challenges';
 
 const Tabs = createBottomTabNavigator<AppRoutes>();
 
@@ -44,7 +45,7 @@ const HomeTabs = () => {
         }}
       />
       <Tabs.Screen
-        component={Feed}
+        component={Challenges}
         name="Challenges"
         options={{
           tabBarIcon: ({ color }) => (

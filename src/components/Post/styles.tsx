@@ -48,8 +48,16 @@ const styles = StyleSheet.create({
     right: 10,
     top: '5%',
     backgroundColor: '#E7357B',
-    borderRadius: 20
-  }
+    borderRadius: 20,
+  },
+  challengeText: {
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop: 10,
+    paddingBottom: 10,
+    color: '#fff',
+    fontWeight: 'bold',
+  },
 });
 
 export default styles;
