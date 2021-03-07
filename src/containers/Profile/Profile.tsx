@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Dimensions, StatusBar, StyleSheet, View } from 'react-native';
+import { Dimensions, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Video from 'react-native-video';
+import FollowBtn from '../../components/Follow/FollowBtn';
 
 import PostLikes from '../../components/Post/PostLikes';
 import ProfileNumbers from '../../components/ProfileView/ProfileNumbers';
@@ -26,6 +27,9 @@ function Profile() {
             <ProfileNumbers name="Challenges" value="40" />
             <ProfileNumbers name="Likes" value="9.8M" />
             <ProfileNumbers name="Followers" value="10.8M" />
+          </View>
+          <View style={styles.followSlot}>
+            <FollowBtn />
           </View>
           <View style={styles.postsContainer}>
             {posts.map((post, idx) => {
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
   numbersContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginTop: 20
+    marginTop: 10
   },
   postsContainer: {
     paddingTop: 20,
@@ -95,6 +99,10 @@ const styles = StyleSheet.create({
   },
   videoContainer: {
     flex: 1
+  },
+  followSlot: {
+    marginTop: 20,
+    alignItems: 'center'
   }
 });
 
