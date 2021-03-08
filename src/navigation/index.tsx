@@ -12,7 +12,7 @@ import { navigationRef } from './rootNavigation';
 const RootStack = createStackNavigator<AppRoutes>();
 
 const RootStackNavigation = () => {
-  const loggedIn = false;
+  const loggedIn = true;
 
   return (
     <NavigationContainer ref={navigationRef}>

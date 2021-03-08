@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View } from 'react-native';
+import { TouchableNativeFeedback } from 'react-native-gesture-handler';
 
 import { FONT_SIZE_14 } from '../../_styles/Typography';
 
@@ -9,14 +10,17 @@ import ProfilePhoto from './ProfilePhoto';
 type Props = {
   uri: string;
   small: boolean;
+  // navigation: Object;
 };
 
-function ProfilePhotoName({ uri, small }: Props) {
+function ProfilePhotoName({ uri, small, navigation }: Props) {
   return (
-    <View style={styles.userProfile}>
-      <ProfilePhoto uri={uri} small={small} />
-      <Text style={styles.userName}>Yalla Habibi</Text>
-    </View>
+    <TouchableNativeFeedback onPress={() => console.log('yoooo')}>
+      <View style={styles.userProfile}>
+        <ProfilePhoto uri={uri} small={small} />
+        <Text style={styles.userName}>Yalla Habibi</Text>
+      </View>
+    </TouchableNativeFeedback>
   );
 }
 
